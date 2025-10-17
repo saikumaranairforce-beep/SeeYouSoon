@@ -7,18 +7,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="background"></div>
   <header>
     <h1>🌏 Smart Travel Tips</h1>
     <p>Select a city to explore travel guides and local insights</p>
+    <input type="text" id="searchBox" placeholder="🔍 Search for a city..." onkeyup="filterCities()">
   </header>
 
   <main>
-    <div class="city-grid">
-      <div class="city-card" onclick="showCity('singapore')">
+    <div class="city-grid" id="cityGrid">
+      <div class="city-card" data-city="singapore" onclick="showCity('singapore')">
         <img src="https://flagcdn.com/w320/sg.png" alt="Singapore Flag" class="flag-icon">
         <h2>Singapore</h2>
       </div>
-      <div class="city-card" onclick="showCity('bangkok')">
+      <div class="city-card" data-city="bangkok" onclick="showCity('bangkok')">
         <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag" class="flag-icon">
         <h2>Bangkok</h2>
       </div>

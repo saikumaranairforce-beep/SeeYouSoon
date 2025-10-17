@@ -1,17 +1,49 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background: linear-gradient(180deg, #e3f2fd, #fce4ec);
   color: #333;
+  position: relative;
+  min-height: 100vh;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1500&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: brightness(0.7);
+  z-index: -1;
 }
 
 header {
   text-align: center;
   padding: 20px;
-  background: linear-gradient(90deg, #90caf9, #f48fb1);
-  color: white;
+  background: rgba(255, 255, 255, 0.85);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  backdrop-filter: blur(8px);
+}
+
+#searchBox {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #90caf9;
+  border-radius: 20px;
+  text-align: center;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#searchBox:focus {
+  border-color: #f48fb1;
+  box-shadow: 0 0 8px #f48fb1;
 }
 
 .city-grid {
@@ -22,7 +54,7 @@ header {
 }
 
 .city-card {
-  background: white;
+  background: rgba(255,255,255,0.9);
   border-radius: 15px;
   text-align: center;
   padding: 15px;
@@ -48,7 +80,7 @@ header {
 }
 
 .category-card {
-  background: white;
+  background: rgba(255,255,255,0.9);
   margin: 10px 0;
   padding: 15px;
   border-radius: 12px;
@@ -81,8 +113,9 @@ footer {
   text-align: center;
   padding: 15px;
   font-size: 14px;
-  background: white;
+  background: rgba(255,255,255,0.85);
   border-top: 1px solid #ddd;
+  backdrop-filter: blur(8px);
 }
 
 .hidden { display: none; }

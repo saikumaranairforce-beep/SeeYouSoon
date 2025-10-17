@@ -89,3 +89,12 @@ function goBack() {
   document.querySelector('.city-grid').classList.remove('hidden');
   document.getElementById('cityDetails').classList.add('hidden');
 }
+
+function filterCities() {
+  const input = document.getElementById('searchBox').value.toLowerCase();
+  const cards = document.querySelectorAll('.city-card');
+  cards.forEach(card => {
+    const name = card.dataset.city.toLowerCase();
+    card.style.display = name.includes(input) ? 'block' : 'none';
+  });
+}
