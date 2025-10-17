@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Travel Tips</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🌏 Smart Travel Tips</h1>
+    <p>Select a city to explore travel guides and local insights</p>
+  </header>
+
+  <main>
+    <div class="city-grid">
+      <div class="city-card" onclick="showCity('singapore')">
+        <img src="https://flagcdn.com/w320/sg.png" alt="Singapore Flag" class="flag-icon">
+        <h2>Singapore</h2>
+      </div>
+      <div class="city-card" onclick="showCity('bangkok')">
+        <img src="https://flagcdn.com/w320/th.png" alt="Thailand Flag" class="flag-icon">
+        <h2>Bangkok</h2>
+      </div>
+    </div>
+
+    <section id="cityDetails" class="hidden">
+      <button class="back-btn" onclick="goBack()">← Back</button>
+      <h2 id="cityName"></h2>
+      <div id="categoryList"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Smart Travel Tips | Designed for travelers 💙💗</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
